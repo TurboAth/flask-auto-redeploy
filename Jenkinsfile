@@ -4,12 +4,12 @@ pipeline {
     PROJECT_DIR = "${env.HOME}/flask-auto-redeploy"
     HEALTH_URL  = 'http://127.0.0.1:5000/health'
   }
-  triggers { cron('H/5 * * * *') } // every 5 minutes
+  triggers { cron('H/1 * * * *') } // every 5 minutes
   stages {
     stage('Checkout Code') {
       steps {
         git branch: 'main',
-            url: 'https://github.com/atharvbyadav/flask-auto-redeploy.git'
+            url: 'https://github.com/TurboAth/flask-auto-redeploy.git'
       }
     }
     stage('Health Check & Redeploy') {
