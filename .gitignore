@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+*.out
+
+# Docker build files
+*.pid
+*.tar
+
+# Jenkins local files
+.jenkins/
+jenkins.log
+
+# System/OS
+.DS_Store
+.env

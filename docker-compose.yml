@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  web:
+    build: .
+    image: flask-auto-redeploy:latest
+    container_name: flask-auto-web
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fS", "http://127.0.0.1:5000/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
