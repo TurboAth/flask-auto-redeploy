@@ -6,7 +6,8 @@ app = Flask(__name__)
 TEMPLATE = """
 <!doctype html>
 <title>Auto-Redeploy Demo</title>
-<h1>Welcome to Flask Auto-Redeploy Demo! It is Redeployed</h1>
+<h1>Welcome to Flask Auto-Redeploy Demo! It is Redeployed!!!</h1>
+<h1>We did it!!!</h1>
 <p>Random number: {{ rand }}</p>
 """
 
